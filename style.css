@@ -1,0 +1,450 @@
+@font-face {
+    font-family: Oracle;
+    src: url("./_fonts/Oracle/OracleSans-SBd.woff2");
+}
+
+* {
+    font-family: Oracle;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.1s ease-in-out;
+}
+
+/* *:hover {
+    transform: translateY(-2px);
+} */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./fructose.jpg") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, p, a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+            
+.footer a, .news-a, .post-a {
+    color: #b4c7d9;
+}
+            
+a:hover {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, .9);
+}
+
+/* 导航栏样式 */
+.navigation {
+    font-size: 1.2rem;
+    padding: 12px 20px;
+    background-color: rgba(33, 33, 33, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+.nav-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.nav-logo-a, .nav-contact-a, .users {
+    display: flex;
+    align-items: center;
+}
+
+/* 页面容器 */
+.page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* 搜索区域样式 */
+.searchs {
+    background-color: rgba(33, 33, 33, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-f {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* 新闻区域样式 */
+.news {
+    background-color: rgba(33, 33, 33, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 500px;
+    padding: 25px 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.news-h1 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.news p {
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: left;
+}
+
+/* 页脚样式 */
+.footer {
+    background-color: rgba(33, 33, 33, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.mascotby {
+    color: rgba(255, 255, 255, 0.753);
+}
+
+.mascotby p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-links {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.753);
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 输入框和按钮样式 */
+.search-ipt {
+    flex: 1;
+    height: 45px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    backdrop-filter: blur(5px);
+}
+
+.search-ipt:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+.search-ipt:focus {
+    background-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+}
+
+.search-ipt::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-btn, .latest-btn, .popular-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.search-btn {
+    width: 45px;
+    padding: 0;
+}
+
+.latest-btn, .popular-btn {
+    flex: 1;
+}
+
+.search-btn:hover, .latest-btn:hover, .popular-btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .searchs {
+        width: 95%;
+    }
+                
+    .news, .footer {
+        width: 95%;
+    }
+                
+    .search-f {
+        flex-direction: column;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .navigation {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
+
+/* 确保内容区域可以滚动 */
+.news, .footer {
+    overflow: auto;
+}
+
+.pHr {
+    color: rgba(255, 255, 255, 0.753);
+}
+
+/* 修改 .profiles 类 */
+.profiles {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* 增加头像和文字间距 */
+    padding: 30px 25px; /* 增加内边距 */
+}
+
+/* 调整用户头像大小 */
+.profiles .users-head {
+    width: 65px; /* 增加头像尺寸 */
+    height: 65px;
+    border-radius: 50%; /* 圆形头像 */
+    object-fit: cover; /* 保持比例 */
+}
+
+/* 调整用户名字样式 */
+.users-name {
+    margin-bottom: 0; /* 移除底部边距 */
+    font-size: 1.8rem; /* 增加字体大小 */
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* 添加文字阴影 */
+}
+
+.hello {
+    background-color: rgba(33, 33, 33, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 500px;
+    padding: 25px 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hello-h1 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.hello-p {
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: left;
+}
+
+.tips {
+    background-color: rgba(33, 33, 33, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 500px;
+    padding: 25px 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.heimu, .heimu a, a .heimu, .heimu a.new {
+    background-color: #00aeff;
+    color: #00aeff;
+    text-shadow: none;
+    transition: all 0.3s ease-in-out;
+}
+.heimu:hover, .heimu:active,
+.heimu:hover .heimu, .heimu:active .heimu {
+    color: white !important;
+}
+.heimu:hover a, a:hover .heimu,
+.heimu:active a, a:active .heimu {
+    color: rgb(0, 0, 0) !important;
+}
+.heimu:hover .new, .heimu .new:hover, .new:hover .heimu,
+.heimu:active .new, .heimu .new:active, .new:active .heimu {
+    color: #BA0000 !important;
+}
+
+/*阅读更多：https://zh.moegirl.org/MediaWiki:Mobile.css 本文引自萌娘百科(https://zh.moegirl.org)，文字内容默认使用《知识共享 署名-非商业性使用-相同方式共享 3.0》协议。*/
+
+/* 表格样式 */
+.table {
+    width: 100%;
+    text-align: left;
+}
+
+.table h1 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.table p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: left;
+}
+
+.table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.table th {
+    background-color: rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+    text-align: center;
+}
+
+.table td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table tr:hover td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.table code {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+code {
+    font-family: Oracle;
+}
+
+/* 响应式表格 */
+@media (max-width: 600px) {
+    .table table {
+        font-size: 0.9rem;
+    }
+    
+    .table th, .table td {
+        padding: 8px 10px;
+    }
+}
+
+.posts {
+    background-color: rgba(33, 33, 33, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 85%;
+    max-width: 500px;
+    padding: 25px 20px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.post-h1 {
+    /* margin-bottom: 15px; */
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.post-p {
+    line-height: 1.6;
+    opacity: 0.9;
+    text-align: left;
+}
+
+.post-image {
+    margin: 10px 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.emoji {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background: url("./webicon-white.png") no-repeat center center;
+    background-size: cover;
+}
